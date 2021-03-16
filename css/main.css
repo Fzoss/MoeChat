@@ -1,0 +1,74 @@
+#app {
+	max-width: 500px;
+
+}
+
+main::-webkit-scrollbar {
+	width: 0;
+}
+
+.powered {
+	text-align: center;
+	font-size: 0.5px;
+	bottom: 0;
+	height: 0.35rem;
+	margin-top: -0.25rem;
+}
+
+
+.app-title {
+	text-align: center;
+	color: transparent;
+	font-weight: bold;
+	background: linear-gradient(45deg, rgba(255, 85, 127, 1) 100%, rgba(170, 85, 127, .4) 0%);
+	-webkit-background-clip: text;
+}
+
+.lite-chatbox .cleft .content {
+	background: rgba(255, 85, 127, 0.3) 50%;
+}
+
+.paper {
+	height: calc(95vh);
+	position: relative;
+	margin: 30px auto;
+	padding: 30px 0;
+	border: 1px solid #efefef;
+	background-color: #FFFFFD;
+	background-image: url(./paper.png);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+
+	&::before,
+	&::after {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		left: 10px;
+		bottom: 10px;
+		width: 45%;
+		height: 55%;
+		max-height: 100px;
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+		transform: skew(-15deg) rotate(-4deg);
+	}
+
+	&::after {
+		left: auto;
+		right: 10px;
+		transform: skew(15deg) rotate(4deg);
+	}
+}
+
+.inputBox {
+	position: absolute;
+	bottom: 1vh;
+	left: auto;
+	right: auto;
+	height: ??px;
+	width: 100%;
+	z-index: 999;
+}
+
+/* .lite-chatbox{
+	height: calc(75vh);
+} */
