@@ -27,7 +27,7 @@
 					<el-row :span="22">
 						<div class="lite-chatbox">
 
-							<div v-for="message in messageList" class="cmsg" v-bind:class=message.direction>
+							<div v-for="message in messageList" class="cmsg" v-bind:class="message.direction">
 
 								<img class="headIcon radius" ondragstart="return false;" oncontextmenu="return false;" v-bind:src="['./img/avatar/'+message.avatar]" />
 								<span class="name">{{ message.nick }}</span>
@@ -39,17 +39,18 @@
 					<div class="inputBox">
 						<el-row>
 							<el-col :span="18">
-								<el-input v-model="inputBox" placeholder="请输入内容"></el-input>
+								<el-input v-model="inputBox" @keyup.enter.native="send" placeholder="请输入内容"></el-input>
 							</el-col>
+							 
 							<el-col :span="4">
-								<el-button @click="send">发送</el-button>
+								<el-button @click="send" >发送</el-button>
 								<el-col>
 						</el-row>
 					</div>
 				</el-main>
 				
 			</el-container>
-			<el-row><div class="powered">Powered by <a href="https://github.com/Kyomotoi/AnimeThesaurus">AnimeThesaurus</a> <a href="https://github.com/MorFansLab/LiteWebChat_Frame">LiteWebChat</a></div></el-row>
+			<el-row><div class="powered">Powered by <a href="https://github.com/Fzoss/MoeChat">MoeChat</a></div></el-row>
 		</body>
 		
 		<script type="text/javascript">
@@ -110,7 +111,7 @@
 					this.getThesaurus();
 					this.messageList.push({
 						nick: this.botNick,
-						msg: '你是我的master嘛?',
+						msg: '你好呀',
 						direction: 'cleft',
 						avatar: this.botAvatar
 					});
