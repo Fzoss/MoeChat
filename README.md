@@ -1,6 +1,6 @@
 # 这是什么
 在群员建议下基于某词库制作的聊天UI	<br>
-在线演示在 [这里查看](http://demo.fzoss.cc/acgchat) <br>
+在线演示在 [这里查看](https://74dc6sqrgbqj.pages.dev/) <br>
 ![example01.png](https://github.com/Fzoss/MoeChat/blob/main/blob/example01.png) 
 
 ## 贡献
